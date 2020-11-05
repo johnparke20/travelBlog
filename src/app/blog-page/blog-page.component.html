@@ -1,1 +1,24 @@
-<p>blog-page works!</p>
+<div style="background-image: url('../../assets/blogBackground.jpeg');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
+    <div *ngFor="hero of heroes;" >
+        <div class="row" >
+            <div *ngFor="let hero of heroes" >
+                <div class="col s12 m4">
+                    <div class="card medium">
+                        <div class="card-image">
+                        <img src="{{hero}}">
+                        <span class="card-title">Green River Gorge</span>
+                        </div>
+                        <div class="card-content">
+                        <p>Up in Washington I found a cool river out in the boonies. 
+                            They have camping areas and a huge cliff face covered in moss. 
+                            There was a rope swing and a chill atmosphere.</p>
+                        </div>
+                        <div class="card-action">
+                        <a href="/blog-post">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

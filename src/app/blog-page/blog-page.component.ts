@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-page.component.scss']
 })
 export class BlogPageComponent implements OnInit {
+  heroes;
 
-  constructor() { }
+  constructor() {this.heroes = ['../../assets/background1.jpg','../../assets/background2.jpg','../../assets/background3.jpg']; }
 
   ngOnInit(): void {
   }
