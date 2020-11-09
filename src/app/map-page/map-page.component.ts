@@ -22,22 +22,22 @@ export class MapPageComponent implements OnInit {
 
   addPins(){
     var myIcon = L.icon({
-      iconUrl: '../../assets/pin.png',
+      iconUrl: '../../assets/pin2.png',
   
       iconSize:     [38, 38], // size of the icon
       iconAnchor:   [19, 38], // point of the icon which will correspond to marker's location
       popupAnchor:  [0,-25]
     });
-    for(var i:any = 0; i<4;i+=1){
+    for(var i:any = 0; i<this.locations.length;i+=1){
       var temp = this.locations[i][1];
-      var marker = L.marker(temp,{icon:myIcon}).addTo(this.mymap).bindPopup("<b>Blog "+this.locations[i][0]+"<br></b><a href='/map?id="+i+"' rel='no-refresh'>Click on me to see my blog post.</a>");
+      var marker = L.marker(temp,{icon:myIcon}).addTo(this.mymap).bindPopup("<b>"+this.locations[i][0]+"<br></b><a href='/map?id="+i+"' rel='no-refresh'>Click to see post.</a>");
       this.blogPins.push(marker);
     }
   }
 
   changePost(){
     var body = document.querySelector('.blogContent');
-    body.innerHTML = this.blogContents[this.currentPost];
+    body.innerHTML = "<b>"+<string>this.locations[this.currentPost][0]+"</b>";
   }
 
   onMapClick(e) {
@@ -49,7 +49,7 @@ export class MapPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.mymap = L.map('mapid').setView([41.035820, -97.403819], 5);
+    this.mymap = L.map('mapid').setView([41.035820, -97.403819], 4);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
