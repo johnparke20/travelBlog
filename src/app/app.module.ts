@@ -9,6 +9,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { MapPageComponent } from './map-page/map-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
     AboutPageComponent,
     HomePageComponent,
     NavbarComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    MapPageComponent
   ],
   imports: [
     BrowserModule,

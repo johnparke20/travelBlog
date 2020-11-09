@@ -5,6 +5,7 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { MapPageComponent } from './map-page/map-page.component';
 
 
 
@@ -16,6 +17,14 @@ const routes: Routes = [
   {
     path:'blog-post',
     component: BlogPostComponent
+  },
+  {
+    path:'map',
+    component: MapPageComponent
+  },
+  {
+    path:'map/:',
+    component: MapPageComponent
   },
   {
     path:'blog',
