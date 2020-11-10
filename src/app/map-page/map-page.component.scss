@@ -1,6 +1,7 @@
 #mapid { 
     height: 480px; 
     margin-bottom: 160px;
+    font-size: 14px;
 }
 .row{
     width:70%;
@@ -13,4 +14,9 @@
     height: 250px;
     padding-top: 20px;
     margin-bottom: 0px;
+}
+.mapContainer{
+    height: 487px;
+    border:3px;
+    border-style: solid;
 }

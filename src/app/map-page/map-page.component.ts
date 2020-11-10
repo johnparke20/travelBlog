@@ -30,14 +30,14 @@ export class MapPageComponent implements OnInit {
     });
     for(var i:any = 0; i<this.locations.length;i+=1){
       var temp = this.locations[i][1];
-      var marker = L.marker(temp,{icon:myIcon}).addTo(this.mymap).bindPopup("<b>"+this.locations[i][0]+"<br></b><a href='/map?id="+i+"' rel='no-refresh'>Click to see post.</a>");
+      var marker = L.marker(temp,{icon:myIcon}).addTo(this.mymap).bindPopup("<a href='/map?id="+i+"' rel='no-refresh'><b>"+this.locations[i][0]+"</b></a><p>"+this.locations[i][2]+"</p>");
       this.blogPins.push(marker);
     }
   }
 
   changePost(){
     var body = document.querySelector('.blogContent');
-    body.innerHTML = "<b>"+<string>this.locations[this.currentPost][0]+"</b>";
+    body.innerHTML = "<b>"+<string>this.locations[this.currentPost][0]+"</b><p>"+this.locations[this.currentPost][2]+"</p>";
   }
 
   onMapClick(e) {
@@ -51,9 +51,9 @@ export class MapPageComponent implements OnInit {
   ngOnInit(): void {
     this.mymap = L.map('mapid').setView([41.035820, -97.403819], 4);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      attribution: 'contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
-      id: 'mapbox/streets-v11',
+      id: 'parkejo1/ckhc1uff802jy19o5h8kt8xbu',
       tileSize: 512,
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoicGFya2VqbzEiLCJhIjoiY2toYW1xd2tjMDM0bDJ5bzBuYmtvemphNiJ9.gv751jF0D8YE0L1I7g3Y7g'
