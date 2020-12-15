@@ -1,10 +1,24 @@
-.collection{
-    text-align: center;
-    border: 0px;
+.about{
+    margin:10%;
 }
-.tab{
-    padding-left: 40px;
+img{
+    height:fill;
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
 }
-h5{
-    margin-bottom: 40px;
+.column {
+    float: left;
+    width: 50%;
+}
+.ro{
+    border: 24px solid rgba(68,90,100,1);
+}
+.ro:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+p{
+    line-height: 2em;
 }
